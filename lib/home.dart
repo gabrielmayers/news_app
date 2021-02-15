@@ -30,14 +30,24 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
-      body: Container(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: CardNews(),
-            )
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CardNews(),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CardNews(),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CardNews(),
+              )
+            ],
+          ),
         ),
       ),
     );
