@@ -18,7 +18,7 @@ class _CardNewsState extends State<CardNews> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ListTile(
-              leading: Icon(Icons.accessibility_rounded),
+              leading: Icon(Icons.account_box),
               title: Text(
                 "Teste Card",
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
@@ -30,14 +30,24 @@ class _CardNewsState extends State<CardNews> {
               child: ButtonBar(
                 children: [
                   FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Scaffold.of(context).showSnackBar(SnackBar(
+                        content: Text("You touched me!"),
+                        backgroundColor: Colors.blueAccent,
+                      ));
+                    },
                     child: Text(
                       "Take",
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ),
                   FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Scaffold.of(context).showSnackBar(SnackBar(
+                        content: Text("You touched me!"),
+                        backgroundColor: Colors.blueAccent,
+                      ));
+                    },
                     child: Text(
                       "Away",
                       style: TextStyle(color: Colors.white, fontSize: 18),
