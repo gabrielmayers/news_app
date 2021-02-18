@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/cardnews.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -13,21 +14,20 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
-        title: Row(
-          children: [
-            Icon(
-              Icons.menu,
-              color: Colors.black,
-            )
-          ],
+        leading: Icon(
+          Icons.menu,
+          color: Colors.grey,
+        ),
+        title: Center(
+          child: Text("News",
+              style: GoogleFonts.bigshotOne(
+                  color: Colors.black, fontWeight: FontWeight.bold)),
         ),
         actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 10),
-            child: CircleAvatar(
-              backgroundImage: AssetImage("images/eu.jpg"),
-            ),
-          )
+          Icon(
+            Icons.search,
+            color: Colors.grey,
+          ),
         ],
       ),
       body: SingleChildScrollView(

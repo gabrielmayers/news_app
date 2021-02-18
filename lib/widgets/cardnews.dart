@@ -18,12 +18,20 @@ class _CardNewsState extends State<CardNews> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ListTile(
-              leading: Icon(Icons.account_box),
+              leading: Icon(
+                Icons.account_box,
+              ),
               title: Text(
                 "Teste Card",
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
-              subtitle: Text("Test Card"),
+              subtitle: Text(
+                "Test Card",
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 32),
