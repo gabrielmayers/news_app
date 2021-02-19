@@ -34,6 +34,33 @@ class _HomeState extends State<Home> {
         child: Container(
           child: Column(
             children: [
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(15, 8, 12, 8),
+                    child: Text(
+                      "World",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(15, 8, 12, 8),
+                    child: Text("Business"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(15, 8, 12, 8),
+                    child: Text("Politics"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(15, 8, 12, 8),
+                    child: Text("Tech"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(15, 8, 12, 8),
+                    child: Text("Science"),
+                  )
+                ],
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: CardNews(),
