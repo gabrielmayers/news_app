@@ -8,6 +8,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  FontWeight txtWorld = FontWeight.normal;
+  FontWeight txtBusiness = FontWeight.normal;
+  FontWeight txtPolitics = FontWeight.normal;
+  FontWeight txtTech = FontWeight.normal;
+  FontWeight txtScience = FontWeight.normal;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,26 +43,94 @@ class _HomeState extends State<Home> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 8, 12, 8),
-                    child: Text(
-                      "World",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    child: GestureDetector(
+                      child: Text(
+                        "World",
+                        style: TextStyle(fontWeight: txtWorld),
+                      ),
+                      onTap: () {
+                        setState(() {
+                          txtBusiness = FontWeight.normal;
+                          txtPolitics = FontWeight.normal;
+                          txtTech = FontWeight.normal;
+                          txtScience = FontWeight.normal;
+                          txtWorld = FontWeight.bold;
+                        });
+                        print("CLICADO!");
+                      },
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 8, 12, 8),
-                    child: Text("Business"),
+                    child: GestureDetector(
+                      child: Text(
+                        "Business",
+                        style: TextStyle(fontWeight: txtBusiness),
+                      ),
+                      onTap: () {
+                        setState(() {
+                          txtPolitics = FontWeight.normal;
+                          txtTech = FontWeight.normal;
+                          txtScience = FontWeight.normal;
+                          txtWorld = FontWeight.normal;
+                          txtBusiness = FontWeight.bold;
+                        });
+                      },
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 8, 12, 8),
-                    child: Text("Politics"),
+                    child: GestureDetector(
+                      child: Text(
+                        "Politics",
+                        style: TextStyle(fontWeight: txtPolitics),
+                      ),
+                      onTap: () {
+                        setState(() {
+                          txtTech = FontWeight.normal;
+                          txtScience = FontWeight.normal;
+                          txtWorld = FontWeight.normal;
+                          txtBusiness = FontWeight.normal;
+                          txtPolitics = FontWeight.bold;
+                        });
+                      },
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 8, 12, 8),
-                    child: Text("Tech"),
+                    child: GestureDetector(
+                      child: Text(
+                        "Tech",
+                        style: TextStyle(fontWeight: txtTech),
+                      ),
+                      onTap: () {
+                        setState(() {
+                          txtScience = FontWeight.normal;
+                          txtWorld = FontWeight.normal;
+                          txtBusiness = FontWeight.normal;
+                          txtPolitics = FontWeight.normal;
+                          txtTech = FontWeight.bold;
+                        });
+                      },
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 8, 12, 8),
-                    child: Text("Science"),
+                    child: GestureDetector(
+                      child: Text(
+                        "Science",
+                        style: TextStyle(fontWeight: txtScience),
+                      ),
+                      onTap: () {
+                        setState(() {
+                          txtWorld = FontWeight.normal;
+                          txtBusiness = FontWeight.normal;
+                          txtPolitics = FontWeight.normal;
+                          txtTech = FontWeight.normal;
+                          txtScience = FontWeight.bold;
+                        });
+                      },
+                    ),
                   )
                 ],
               ),
